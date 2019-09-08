@@ -7,156 +7,47 @@
 //
 
 import Cocoa
-import OpenQuickly
+import OpenQuicklyX
 
-struct Language {
-  var name: String
-  var subtitle: String
-  var image: NSImage
-}
-
-let languages: [Language] = [
-  Language(
+let languages: [OQItem] = [
+  OQItem(
     name: "Swift",
-    subtitle: "A general-purpose, multi-paradigm, compiled programming language",
+    subtitle: "A general-purpose, multi-paradigm, compiled programming OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".swift")
   ),
-  Language(
+  OQItem(
     name: "JavaScript",
-    subtitle: "A high-level, interpreted programming language",
+    subtitle: "A high-level, interpreted programming OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".js")
   ),
-  Language(
+  OQItem(
     name: "Java",
-    subtitle: "A general-purpose computer-programming language",
+    subtitle: "A general-purpose computer-programming OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".java")
   ),
-  Language(
+  OQItem(
     name: "Python",
-    subtitle: "An interpreted, high-level, general-purpose programming language",
+    subtitle: "An interpreted, high-level, general-purpose programming OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".py")
   ),
-  Language(
+  OQItem(
     name: "Ruby",
-    subtitle: "A dynamic, interpreted, reflective, object-oriented, general-purpose programming language",
+    subtitle: "A dynamic, interpreted, reflective, object-oriented, general-purpose programming OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".rb")
   ),
-  Language(
+  OQItem(
     name: "Go",
-    subtitle: "A statically typed, compiled programming language",
+    subtitle: "A statically typed, compiled programming OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".go")
   ),
-  Language(
+  OQItem(
     name: "Markdown",
-    subtitle: "A lightweight markup language",
+    subtitle: "A lightweight markup OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".md")
   ),
-  Language(
+  OQItem(
     name: "Bash",
-    subtitle: "A Unix shell and command language",
+    subtitle: "A Unix shell and command OQItem",
     image: NSWorkspace.shared.icon(forFileType: ".sh")
   )
 ]
-
-class ViewController: NSViewController {
-
-  private var openQuicklyWindowController: OpenQuicklyWindowController!
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    let openQuicklyOptions = OpenQuicklyOptions()
-    openQuicklyOptions.width = 500
-    openQuicklyOptions.rowHeight = 50
-    openQuicklyOptions.delegate = self
-    openQuicklyOptions.persistPosition = true
-    openQuicklyOptions.placeholder = "Search for a language"
-
-    self.openQuicklyWindowController = OpenQuicklyWindowController(options: openQuicklyOptions)
-
-    NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
-      if self.keyDown(with: event) {
-        return nil
-      }
-
-      return event
-    }
-  }
-
-  func keyDown(with event: NSEvent) -> Bool {
-    let modifierFlags = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
-
-    // Shift + Command + O
-    if modifierFlags == [.command, .shift] && event.keyCode == 31 {
-      openQuicklyWindowController.toggle()
-      return true
-    }
-
-    return false
-  }
-
-}
-
-extension ViewController: OpenQuicklyDelegate {
-
-  func openQuickly(item: Any) -> NSView? {
-    guard let language = item as? Language else { return nil }
-
-    let view = NSStackView()
-
-    let imageView = NSImageView(image: language.image)
-
-    let title = NSTextField()
-
-    title.isEditable = false
-    title.isBezeled = false
-    title.isSelectable = false
-    title.focusRingType = .none
-    title.drawsBackground = false
-    title.font = NSFont.systemFont(ofSize: 14)
-    title.stringValue = language.name
-
-    let subtitle = NSTextField()
-
-    subtitle.isEditable = false
-    subtitle.isBezeled = false
-    subtitle.isSelectable = false
-    subtitle.focusRingType = .none
-    subtitle.drawsBackground = false
-    subtitle.stringValue = language.subtitle
-    subtitle.font = NSFont.systemFont(ofSize: 12)
-
-    let text = NSStackView()
-    text.orientation = .vertical
-    text.spacing = 2.0
-    text.alignment = .left
-
-    text.addArrangedSubview(title)
-    text.addArrangedSubview(subtitle)
-
-    view.addArrangedSubview(imageView)
-    view.addArrangedSubview(text)
-
-    return view
-  }
-
-  func valueWasEntered(_ value: String) -> [Any] {
-    let matches = languages.filter {
-      $0.name.lowercased().contains(value.lowercased())
-    }
-
-    return matches
-  }
-
-  func itemWasSelected(selected item: Any) {
-    guard let language = item as? Language else { return }
-
-    print("\(language.name) was selected")
-  }
-
-  func windowDidClose() {
-    print("Window did close")
-  }
-
-}
-

@@ -1,0 +1,6 @@
+framework module Pods_OpenQuickly_Demo {
+  umbrella header "Pods-OpenQuickly Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}

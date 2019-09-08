@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class OpenQuicklyWindow: NSWindow, NSWindowDelegate {
+class OpenQuicklyWindow: NSPanel, NSWindowDelegate {
 
   override init(
     contentRect: NSRect,
@@ -19,11 +19,13 @@ class OpenQuicklyWindow: NSWindow, NSWindowDelegate {
     super.init(contentRect: contentRect, styleMask: style, backing: backingStoreType, defer: flag)
 
     self.titleVisibility = .hidden
-    self.styleMask = .borderless
+    self.styleMask = .nonactivatingPanel
     self.backgroundColor = .clear
     self.isOpaque = false
     self.isMovableByWindowBackground = true
     self.delegate = self
+    isFloatingPanel = true
+    hidesOnDeactivate = false
   }
 
   func windowDidResignKey(_ notification: Notification) {

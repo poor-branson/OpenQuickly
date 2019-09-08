@@ -1,0 +1,6 @@
+framework module Pods_OpenQuickly {
+  umbrella header "Pods-OpenQuickly-umbrella.h"
+
+  export *
+  module * { export * }
+}

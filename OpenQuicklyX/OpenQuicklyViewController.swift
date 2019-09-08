@@ -116,6 +116,9 @@ class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
 
     // When enter pressed, indicate that an item was selected
     if keyCode == KeyCode.enter {
+      if searchField.stringValue.isEmpty {
+        return event
+      }
       itemSelected()
       return nil
     }
@@ -148,7 +151,7 @@ class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
 
     let value = searchField.stringValue
 
-    matches = options.delegate?.valueWasEntered(value)
+    matches = options.delegate?.dataSource(value)
 
     reloadMatches()
   }
@@ -291,6 +294,10 @@ extension OpenQuicklyViewController: NSOutlineViewDataSource {
 
   /// Number of items in the matches list
   func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
+//    if matches == nil {
+//      print("empty matches")
+//    }
+    
     return matches.count
   }
 

@@ -33,7 +33,7 @@ open class OpenQuicklyWindowController: NSWindowController {
 
   override open func close() {
     if windowIsVisible {
-      options.delegate?.windowDidClose()
+      options.delegate?.searchBarClosed()
       super.close()
     }
   }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,15 +11,17 @@
 		A101E66222239AB700FA438D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101E66122239AB700FA438D /* AppDelegate.swift */; };
 		A101E66422239AB700FA438D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101E66322239AB700FA438D /* ViewController.swift */; };
 		A101E66622239AB700FA438D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A101E66522239AB700FA438D /* Assets.xcassets */; };
-		A101E66922239AB700FA438D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A101E66722239AB700FA438D /* Main.storyboard */; };
 		A101E67022239AC600FA438D /* OpenQuicklyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101E66F22239AC600FA438D /* OpenQuicklyWindowController.swift */; };
 		A101E67222239ACE00FA438D /* OpenQuicklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101E67122239ACE00FA438D /* OpenQuicklyViewController.swift */; };
 		A101E67422239B2600FA438D /* OpenQuicklyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101E67322239B2600FA438D /* OpenQuicklyWindow.swift */; };
-		A101E67522239C7700FA438D /* OpenQuickly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A101E65022239A9400FA438D /* OpenQuickly.framework */; };
-		A101E67622239C7700FA438D /* OpenQuickly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A101E65022239A9400FA438D /* OpenQuickly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A101E67522239C7700FA438D /* OpenQuicklyX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A101E65022239A9400FA438D /* OpenQuicklyX.framework */; };
+		A101E67622239C7700FA438D /* OpenQuicklyX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A101E65022239A9400FA438D /* OpenQuicklyX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A101E67B22239CFE00FA438D /* OpenQuicklyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101E67A22239CFE00FA438D /* OpenQuicklyOptions.swift */; };
 		A101E67D2223A13700FA438D /* OpenQuicklyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101E67C2223A13700FA438D /* OpenQuicklyDelegate.swift */; };
 		A10BB0162224FDB2000B204B /* OpenQuicklyTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10BB0152224FDB2000B204B /* OpenQuicklyTableRowView.swift */; };
+		DB4895C223253C05003FB375 /* OQItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4895C123253C05003FB375 /* OQItem.swift */; };
+		DBEF76FC2324CE9300A63D28 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEF76FB2324CE9300A63D28 /* Window.xib */; };
+		F7F7E36C7C6F954FA8B6B7BE /* Pods_OpenQuickly_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7409E36A4D4BA703F6A054D /* Pods_OpenQuickly_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A101E67622239C7700FA438D /* OpenQuickly.framework in Embed Frameworks */,
+				A101E67622239C7700FA438D /* OpenQuicklyX.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,14 +49,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A101E65022239A9400FA438D /* OpenQuickly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenQuickly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02598781537B10EDDD6EC599 /* Pods_OpenQuickly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenQuickly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B868EE8ADD21B9A82BC241D /* Pods-OpenQuickly Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenQuickly Demo.debug.xcconfig"; path = "Target Support Files/Pods-OpenQuickly Demo/Pods-OpenQuickly Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		9E49D16D2B751E81455B55AE /* Pods-OpenQuickly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenQuickly.debug.xcconfig"; path = "Target Support Files/Pods-OpenQuickly/Pods-OpenQuickly.debug.xcconfig"; sourceTree = "<group>"; };
+		A101E65022239A9400FA438D /* OpenQuicklyX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenQuicklyX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A101E65322239A9400FA438D /* OpenQuickly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenQuickly.h; sourceTree = "<group>"; };
 		A101E65422239A9400FA438D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A101E65F22239AB700FA438D /* OpenQuickly Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenQuickly Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A101E66122239AB700FA438D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A101E66322239AB700FA438D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A101E66522239AB700FA438D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A101E66822239AB700FA438D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A101E66A22239AB700FA438D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A101E66F22239AC600FA438D /* OpenQuicklyWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuicklyWindowController.swift; sourceTree = "<group>"; };
 		A101E67122239ACE00FA438D /* OpenQuicklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuicklyViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,11 @@
 		A101E67A22239CFE00FA438D /* OpenQuicklyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuicklyOptions.swift; sourceTree = "<group>"; };
 		A101E67C2223A13700FA438D /* OpenQuicklyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuicklyDelegate.swift; sourceTree = "<group>"; };
 		A10BB0152224FDB2000B204B /* OpenQuicklyTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuicklyTableRowView.swift; sourceTree = "<group>"; };
+		C503BD44DF1445878A295D4F /* Pods-OpenQuickly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenQuickly.release.xcconfig"; path = "Target Support Files/Pods-OpenQuickly/Pods-OpenQuickly.release.xcconfig"; sourceTree = "<group>"; };
+		C7409E36A4D4BA703F6A054D /* Pods_OpenQuickly_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenQuickly_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4895C123253C05003FB375 /* OQItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQItem.swift; sourceTree = "<group>"; };
+		DBEF76FB2324CE9300A63D28 /* Window.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
+		F37599B52743FECA2F1AE9E3 /* Pods-OpenQuickly Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenQuickly Demo.release.xcconfig"; path = "Target Support Files/Pods-OpenQuickly Demo/Pods-OpenQuickly Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,32 +85,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A101E67522239C7700FA438D /* OpenQuickly.framework in Frameworks */,
+				A101E67522239C7700FA438D /* OpenQuicklyX.framework in Frameworks */,
+				F7F7E36C7C6F954FA8B6B7BE /* Pods_OpenQuickly_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		230F786562A81F208F392715 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02598781537B10EDDD6EC599 /* Pods_OpenQuickly.framework */,
+				C7409E36A4D4BA703F6A054D /* Pods_OpenQuickly_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FCA1DD192F8D1929146DC92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E49D16D2B751E81455B55AE /* Pods-OpenQuickly.debug.xcconfig */,
+				C503BD44DF1445878A295D4F /* Pods-OpenQuickly.release.xcconfig */,
+				8B868EE8ADD21B9A82BC241D /* Pods-OpenQuickly Demo.debug.xcconfig */,
+				F37599B52743FECA2F1AE9E3 /* Pods-OpenQuickly Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A101E64622239A9400FA438D = {
 			isa = PBXGroup;
 			children = (
-				A101E65222239A9400FA438D /* OpenQuickly */,
+				A101E65222239A9400FA438D /* OpenQuicklyX */,
 				A101E66022239AB700FA438D /* OpenQuickly Demo */,
 				A101E65122239A9400FA438D /* Products */,
+				7FCA1DD192F8D1929146DC92 /* Pods */,
+				230F786562A81F208F392715 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		A101E65122239A9400FA438D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A101E65022239A9400FA438D /* OpenQuickly.framework */,
+				A101E65022239A9400FA438D /* OpenQuicklyX.framework */,
 				A101E65F22239AB700FA438D /* OpenQuickly Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A101E65222239A9400FA438D /* OpenQuickly */ = {
+		A101E65222239A9400FA438D /* OpenQuicklyX */ = {
 			isa = PBXGroup;
 			children = (
 				A101E65422239A9400FA438D /* Info.plist */,
@@ -112,8 +144,9 @@
 				A101E67322239B2600FA438D /* OpenQuicklyWindow.swift */,
 				A101E66F22239AC600FA438D /* OpenQuicklyWindowController.swift */,
 				A10BB0152224FDB2000B204B /* OpenQuicklyTableRowView.swift */,
+				DB4895C123253C05003FB375 /* OQItem.swift */,
 			);
-			path = OpenQuickly;
+			path = OpenQuicklyX;
 			sourceTree = "<group>";
 		};
 		A101E66022239AB700FA438D /* OpenQuickly Demo */ = {
@@ -122,7 +155,7 @@
 				A101E66122239AB700FA438D /* AppDelegate.swift */,
 				A101E66322239AB700FA438D /* ViewController.swift */,
 				A101E66522239AB700FA438D /* Assets.xcassets */,
-				A101E66722239AB700FA438D /* Main.storyboard */,
+				DBEF76FB2324CE9300A63D28 /* Window.xib */,
 				A101E66A22239AB700FA438D /* Info.plist */,
 			);
 			path = "OpenQuickly Demo";
@@ -142,10 +175,11 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A101E64F22239A9400FA438D /* OpenQuickly */ = {
+		A101E64F22239A9400FA438D /* OpenQuicklyX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A101E65822239A9400FA438D /* Build configuration list for PBXNativeTarget "OpenQuickly" */;
+			buildConfigurationList = A101E65822239A9400FA438D /* Build configuration list for PBXNativeTarget "OpenQuicklyX" */;
 			buildPhases = (
+				2D79B43B6DD04C2009B780A3 /* [CP] Check Pods Manifest.lock */,
 				A101E64B22239A9400FA438D /* Headers */,
 				A101E64C22239A9400FA438D /* Sources */,
 				A101E64D22239A9400FA438D /* Frameworks */,
@@ -155,19 +189,21 @@
 			);
 			dependencies = (
 			);
-			name = OpenQuickly;
+			name = OpenQuicklyX;
 			productName = OpenQuickly;
-			productReference = A101E65022239A9400FA438D /* OpenQuickly.framework */;
+			productReference = A101E65022239A9400FA438D /* OpenQuicklyX.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A101E65E22239AB700FA438D /* OpenQuickly Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A101E66C22239AB700FA438D /* Build configuration list for PBXNativeTarget "OpenQuickly Demo" */;
 			buildPhases = (
+				7259E21D88B96663227B7FA7 /* [CP] Check Pods Manifest.lock */,
 				A101E65B22239AB700FA438D /* Sources */,
 				A101E65C22239AB700FA438D /* Frameworks */,
 				A101E65D22239AB700FA438D /* Resources */,
 				A101E67922239C7700FA438D /* Embed Frameworks */,
+				A1EBC9A3FCAD5B4190FD77CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,7 +248,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A101E64F22239A9400FA438D /* OpenQuickly */,
+				A101E64F22239A9400FA438D /* OpenQuicklyX */,
 				A101E65E22239AB700FA438D /* OpenQuickly Demo */,
 			);
 		};
@@ -231,11 +267,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				A101E66622239AB700FA438D /* Assets.xcassets in Resources */,
-				A101E66922239AB700FA438D /* Main.storyboard in Resources */,
+				DBEF76FC2324CE9300A63D28 /* Window.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D79B43B6DD04C2009B780A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenQuickly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7259E21D88B96663227B7FA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenQuickly Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1EBC9A3FCAD5B4190FD77CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenQuickly Demo/Pods-OpenQuickly Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenQuickly Demo/Pods-OpenQuickly Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenQuickly Demo/Pods-OpenQuickly Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A101E64C22239A9400FA438D /* Sources */ = {
@@ -244,6 +344,7 @@
 			files = (
 				A101E67422239B2600FA438D /* OpenQuicklyWindow.swift in Sources */,
 				A101E67022239AC600FA438D /* OpenQuicklyWindowController.swift in Sources */,
+				DB4895C223253C05003FB375 /* OQItem.swift in Sources */,
 				A10BB0162224FDB2000B204B /* OpenQuicklyTableRowView.swift in Sources */,
 				A101E67222239ACE00FA438D /* OpenQuicklyViewController.swift in Sources */,
 				A101E67D2223A13700FA438D /* OpenQuicklyDelegate.swift in Sources */,
@@ -265,21 +366,10 @@
 /* Begin PBXTargetDependency section */
 		A101E67822239C7700FA438D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A101E64F22239A9400FA438D /* OpenQuickly */;
+			target = A101E64F22239A9400FA438D /* OpenQuicklyX */;
 			targetProxy = A101E67722239C7700FA438D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A101E66722239AB700FA438D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A101E66822239AB700FA438D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A101E65622239A9400FA438D /* Debug */ = {
@@ -405,25 +495,28 @@
 		};
 		A101E65922239A9400FA438D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E49D16D2B751E81455B55AE /* Pods-OpenQuickly.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = OpenQuickly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenQuicklyX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.OpenQuickly;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.poor-branson.OpenQuicklyX";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -432,25 +525,28 @@
 		};
 		A101E65A22239A9400FA438D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C503BD44DF1445878A295D4F /* Pods-OpenQuickly.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = OpenQuickly/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OpenQuicklyX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.lukakerr.OpenQuickly;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.poor-branson.OpenQuicklyX";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -458,38 +554,46 @@
 		};
 		A101E66D22239AB700FA438D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B868EE8ADD21B9A82BC241D /* Pods-OpenQuickly Demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "OpenQuickly Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.lukakerr.OpenQuickly-Demo";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.poor-branson.OpenQuickly-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		A101E66E22239AB700FA438D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37599B52743FECA2F1AE9E3 /* Pods-OpenQuickly Demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "OpenQuickly Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.github.lukakerr.OpenQuickly-Demo";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.poor-branson.OpenQuickly-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -506,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A101E65822239A9400FA438D /* Build configuration list for PBXNativeTarget "OpenQuickly" */ = {
+		A101E65822239A9400FA438D /* Build configuration list for PBXNativeTarget "OpenQuicklyX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A101E65922239A9400FA438D /* Debug */,

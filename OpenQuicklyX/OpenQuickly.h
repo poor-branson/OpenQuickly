@@ -9,10 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 //! Project version number for OpenQuickly.
-FOUNDATION_EXPORT double OpenQuicklyVersionNumber;
+FOUNDATION_EXPORT double OpenQuicklyXVersionNumber;
 
 //! Project version string for OpenQuickly.
-FOUNDATION_EXPORT const unsigned char OpenQuicklyVersionString[];
+FOUNDATION_EXPORT const unsigned char OpenQuicklyXVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <OpenQuickly/PublicHeader.h>
 
